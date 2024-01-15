@@ -1,0 +1,329 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Benjamin&#39;s Navigation 现已支持深色模式 | Benjamin&#39;s Newsroom</title>
+<link rel="shortcut icon" href="https://yyl125.top/newsroom/favicon.ico?v=1705334361857">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://yyl125.top/newsroom/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Benjamin&#39;s Navigation 现已支持深色模式 | Benjamin&#39;s Newsroom - Atom Feed" href="https://yyl125.top/newsroom/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script defer>
+  (function (document) {
+    const SOURCE = 'https://cdn.jsdelivr.net';
+    const DEST = 'https://gcore.jsdelivr.net';
+    const $ = document.querySelectorAll.bind(document);
+    const checkAvailable = (callback) => {
+      let timeoutId;
+      const newNode = document.createElement('link');
+      newNode.rel = 'stylesheet';
+      newNode.text = 'text/css';
+      const onError = () => {
+        if (!timeoutId) {
+          return;
+        }
+  
+        clearTimeout(timeoutId);
+        timeoutId = 0;
+        newNode.href = 'about:blank';
+        newNode.remove();
+        callback(false);
+      };
+  
+      timeoutId = setTimeout(onError, 2000);
+      newNode.addEventListener('error', onError);
+      newNode.addEventListener('load', function () {
+        newNode.remove();
+        clearTimeout(timeoutId);
+        callback(true);
+      });
+  
+      newNode.href =
+        SOURCE +
+        '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+        Date.now();
+      document.head.insertAdjacentElement('afterbegin', newNode);
+    };
+  
+    const replaceElementSrc = () => {
+      for (const element of $('link[rel="stylesheet"]')) {
+        if (element.href && element.href.includes(SOURCE)) {
+          element.href = element.href.replace(SOURCE, DEST);
+        }
+      }
+  
+      for (const element of $('script')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const newNode = document.createElement('script');
+          newNode.src = element.src.replace(SOURCE, DEST);
+          element.defer = true;
+          element.src = '';
+          element.before(newNode);
+          element.remove();
+        }
+      }
+  
+      for (const element of $('img')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const source = element.src;
+          // Used to cancel loading. Without this line it will remain pending status.
+          element.src = '';
+          element.src = source.replace(SOURCE, DEST);
+        }
+      }
+    };
+  
+    checkAvailable(function (isAvailable) {
+      if (isAvailable) {
+        return;
+      }
+  
+      console.warn(SOURCE + ' is not available.');
+  
+      replaceElementSrc();
+      // Replace dynamically added elements
+      setInterval(replaceElementSrc, 500);
+    });
+  })(document);
+</script>
+
+    <meta name="description" content="在昏暗的环境中，打开深色模式可获得出色的视觉体验
+
+Benjamin 已于今日推送了 Benjamin's Navigation 的全新版本，为其带来了对深色模式（Dark Mode）的支持以及更多改进与修复
+深色模式
+
+「深色模式」带来了..." />
+    <meta name="keywords" content="更新" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://yyl125.top/newsroom">
+  <img class="avatar" src="https://yyl125.top/newsroom/images/avatar.png?v=1705334361857" alt="">
+  </a>
+  <h1 class="site-title">
+    Benjamin&#39;s Newsroom
+  </h1>
+  <p class="site-description">
+    来自 Benjamin 的最新消息
+  </p>
+  <div class="menu-container">
+    <a href="https://yyl125.top/newsroom" class="menu">首页</a>
+    <a href="https://yyl125.top/newsroom/archives" class="menu">归档</a>
+    <a href="https://yyl125.top/newsroom/tags" class="menu">标签</a>
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Benjamin&#39;s Navigation 现已支持深色模式
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-08-20
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://yyl125.top/newsroom/tag/update/" class="post-tag">
+                  # 更新
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/newsroom/post/Update/Navigation_New_Update_About_Dark_Mode/Navigation_New_Update_About_Dark_Mode_Banner.png" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>在昏暗的环境中，打开深色模式可获得出色的视觉体验</p>
+<!-- more -->
+<p>Benjamin 已于今日推送了 Benjamin's Navigation 的全新版本，为其带来了对深色模式（Dark Mode）的支持以及更多改进与修复</p>
+<h2 id="深色模式">深色模式</h2>
+<blockquote>
+<p>「深色模式」带来了全然一新的外观，它能使您的眼睛放松，并有助于您专心浏览。深色模式使用一种较深的配色方案，这种配色作用于整个页面，包括汉堡导航栏和导航项目内容</p>
+</blockquote>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/newsroom/post/Update/Navigation_New_Update_About_Dark_Mode/Navigation_New_Update_About_Dark_Mode_01.png">
+<p class="media-description">在深色模式下浏览 Benjamin's Navigation</p>
+<p>此次对深色模式的支持不仅体现在页面总体背景色，所有导航项目和地址链接 Pop 均已支持深色模式</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/newsroom/post/Update/Navigation_New_Update_About_Dark_Mode/Navigation_New_Update_About_Dark_Mode_02.png">
+<p class="media-description">现已为各个导航项目实现了深色模式下的正确显示</p>
+<h3 id="深色模式的优势">深色模式的优势</h3>
+<ul>
+<li>可大幅减少耗电量（具体取决于设备的屏幕技术，如 OLED 屏幕）；</li>
+<li>为弱视以及对强光敏感的用户提高可视性；</li>
+<li>让所有人都可以在光线较暗的环境中更轻松地使用设备</li>
+</ul>
+<h3 id="开启深色模式">开启深色模式</h3>
+<p>想要在全新版本的 Benjamin's Navigation 中使用深色模式进行浏览，需要您为您的浏览设备开启系统级深色模式并使用支持媒体查询的网页浏览器进行访问，因为在实现方式上，使用了 <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media/prefers-color-scheme" target="_blank">prefers-color-scheme</a> 这一 CSS 媒体查询技术</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">浏览器</th>
+<th style="text-align:center">桌面端<br>最小支持版本</th>
+<th style="text-align:center">移动端<br>最小支持版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Chrome</td>
+<td style="text-align:center">76</td>
+<td style="text-align:center">76<br>（Android）</td>
+</tr>
+<tr>
+<td style="text-align:center">WebView Android</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">76</td>
+</tr>
+<tr>
+<td style="text-align:center">Edge</td>
+<td style="text-align:center">79</td>
+<td style="text-align:center">/</td>
+</tr>
+<tr>
+<td style="text-align:center">Firefox</td>
+<td style="text-align:center">67</td>
+<td style="text-align:center">67<br>（Android）</td>
+</tr>
+<tr>
+<td style="text-align:center">Internet Explorer</td>
+<td style="text-align:center">不支持</td>
+<td style="text-align:center">/</td>
+</tr>
+<tr>
+<td style="text-align:center">Opera</td>
+<td style="text-align:center">62</td>
+<td style="text-align:center">54<br>（Android）</td>
+</tr>
+<tr>
+<td style="text-align:center">Safari</td>
+<td style="text-align:center">12.1</td>
+<td style="text-align:center">13<br>（iOS/iPadOS）</td>
+</tr>
+<tr>
+<td style="text-align:center">Samsung Internet</td>
+<td style="text-align:center">/</td>
+<td style="text-align:center">14.2</td>
+</tr>
+</tbody>
+</table>
+<p>您可以在 <a href="https://support.apple.com/zh-cn/HT210332" target="_blank">iPhone、iPad、iPod touch</a>、<a href="https://support.apple.com/zh-cn/HT208976" target="_blank">Mac</a>、<a href="https://support.microsoft.com/zh-cn/windows/更改颜色windows-d26ef4d6-819a-581c-1581-493cfcc005fe#WindowsVersion=Windows_10" target="_blank">Windows 10</a> PC 以及 <a href="https://support.microsoft.com/zh-cn/windows/更改颜色windows-d26ef4d6-819a-581c-1581-493cfcc005fe#WindowsVersion=Windows_11" target="_blank">Windows 11</a> PC 上启用系统级深色模式。若您使用 Chrome，您还需在 <a href="https://support.google.com/chrome/answer/9275525?hl=zh-Hans&ref_topic=7439636" target="_blank">Chrome</a> 上启用在深色模式或深色主题</p>
+<h2 id="其它改进与修复">其它改进与修复</h2>
+<p>除了加入对深色模式的支持，本次更新还改进了汉堡导航栏在站点文章页面的显示，提供了一键返回首页的功能</p>
+<img src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/newsroom/post/Update/Navigation_New_Update_About_Dark_Mode/Navigation_New_Update_About_Dark_Mode_03.png">
+<p class="media-description">在文章页面，汉堡导航菜单已提供一键返回首页功能</p>
+<p>另外，作为周期性更新维护项目，本次更新还修改了部分内容的分类并修复了一系列小问题</p>
+
+                <hr>
+                <h3>关于 Benjamin</h3>
+                <p>男生，第一批 00 后。现居安徽合肥<br>目前用闲暇时间创作和维护网站。各网站主要内容可能涉及个人生活、计算机和网络、轨道交通、本人的奇怪想法以及某些本人关注的问题</p>
+                <h3>相关网站</h3>
+                <p><a href="https://yyl125.top/" target="_blank">Benjamin's Blog</a>｜<a href="https://yyl125.top/navigation/" target="_blank">Benjamin's Navigation</a></p>
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F">深色模式</a>
+<ul>
+<li><a href="#%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F%E7%9A%84%E4%BC%98%E5%8A%BF">深色模式的优势</a></li>
+<li><a href="#%E5%BC%80%E5%90%AF%E6%B7%B1%E8%89%B2%E6%A8%A1%E5%BC%8F">开启深色模式</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%B6%E5%AE%83%E6%94%B9%E8%BF%9B%E4%B8%8E%E4%BF%AE%E5%A4%8D">其它改进与修复</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://yyl125.top/newsroom/post/blog_new_update_about_blur_search_in_the_station/">
+              <h3 class="post-title">
+                Benjamin&#39;s Blog 现已支持站内模糊搜索
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  © 2024 Benjamin. All rights reserved.
+  <a class="rss" href="https://yyl125.top/newsroom/copyright" target="_blank">
+    版权信息与资源使用说明
+  </a>
+  <a class="rss" href="https://yyl125.top/newsroom/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

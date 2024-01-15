@@ -1,0 +1,261 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Benjamin 已完成对所属网站的版权信息与资源使用说明 | Benjamin&#39;s Newsroom</title>
+<link rel="shortcut icon" href="https://yyl125.top/newsroom/favicon.ico?v=1705334361857">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://yyl125.top/newsroom/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Benjamin 已完成对所属网站的版权信息与资源使用说明 | Benjamin&#39;s Newsroom - Atom Feed" href="https://yyl125.top/newsroom/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script defer>
+  (function (document) {
+    const SOURCE = 'https://cdn.jsdelivr.net';
+    const DEST = 'https://gcore.jsdelivr.net';
+    const $ = document.querySelectorAll.bind(document);
+    const checkAvailable = (callback) => {
+      let timeoutId;
+      const newNode = document.createElement('link');
+      newNode.rel = 'stylesheet';
+      newNode.text = 'text/css';
+      const onError = () => {
+        if (!timeoutId) {
+          return;
+        }
+  
+        clearTimeout(timeoutId);
+        timeoutId = 0;
+        newNode.href = 'about:blank';
+        newNode.remove();
+        callback(false);
+      };
+  
+      timeoutId = setTimeout(onError, 2000);
+      newNode.addEventListener('error', onError);
+      newNode.addEventListener('load', function () {
+        newNode.remove();
+        clearTimeout(timeoutId);
+        callback(true);
+      });
+  
+      newNode.href =
+        SOURCE +
+        '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+        Date.now();
+      document.head.insertAdjacentElement('afterbegin', newNode);
+    };
+  
+    const replaceElementSrc = () => {
+      for (const element of $('link[rel="stylesheet"]')) {
+        if (element.href && element.href.includes(SOURCE)) {
+          element.href = element.href.replace(SOURCE, DEST);
+        }
+      }
+  
+      for (const element of $('script')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const newNode = document.createElement('script');
+          newNode.src = element.src.replace(SOURCE, DEST);
+          element.defer = true;
+          element.src = '';
+          element.before(newNode);
+          element.remove();
+        }
+      }
+  
+      for (const element of $('img')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const source = element.src;
+          // Used to cancel loading. Without this line it will remain pending status.
+          element.src = '';
+          element.src = source.replace(SOURCE, DEST);
+        }
+      }
+    };
+  
+    checkAvailable(function (isAvailable) {
+      if (isAvailable) {
+        return;
+      }
+  
+      console.warn(SOURCE + ' is not available.');
+  
+      replaceElementSrc();
+      // Replace dynamically added elements
+      setInterval(replaceElementSrc, 500);
+    });
+  })(document);
+</script>
+
+    <meta name="description" content="尊重与维护原创作者权益
+
+Benjamin 已于今日完成对所属网站站点的版权信息与资源使用说明，迈出了保护版权并防止其滥用的一小步
+Benjamin 所属网站站点的版权信息与资源使用说明详见：
+
+Benjamin's Blog
+Benjam..." />
+    <meta name="keywords" content="新闻稿" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://yyl125.top/newsroom">
+  <img class="avatar" src="https://yyl125.top/newsroom/images/avatar.png?v=1705334361857" alt="">
+  </a>
+  <h1 class="site-title">
+    Benjamin&#39;s Newsroom
+  </h1>
+  <p class="site-description">
+    来自 Benjamin 的最新消息
+  </p>
+  <div class="menu-container">
+    <a href="https://yyl125.top/newsroom" class="menu">首页</a>
+    <a href="https://yyl125.top/newsroom/archives" class="menu">归档</a>
+    <a href="https://yyl125.top/newsroom/tags" class="menu">标签</a>
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Benjamin 已完成对所属网站的版权信息与资源使用说明
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-02-25
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://yyl125.top/newsroom/tag/press_release/" class="post-tag">
+                  # 新闻稿
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/newsroom/post/Press_Release/Press_Release_About_Copyright_Guide/Press_Release_About_Copyright_Guide_Banner.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>尊重与维护原创作者权益</p>
+<!-- more -->
+<p>Benjamin 已于今日完成对所属网站站点的版权信息与资源使用说明，迈出了保护版权并防止其滥用的一小步</p>
+<p>Benjamin 所属网站站点的版权信息与资源使用说明详见：</p>
+<ul>
+<li><a href="https://yyl125.top/copyright" target="_blank">Benjamin's Blog</a></li>
+<li><a href="https://yyl125.top/navigation/post/copyright" target="_blank">Benjamin's Navigation</a></li>
+<li><a href="https://yyl125.top/podcast/copyright" target="_blank">Benjamin's Podcast</a></li>
+<li><a href="https://yyl125.top/newsroom/copyright" target="_blank">Benjamin's Newsroom</a></li>
+</ul>
+<h2 id="关于版权与版权保护">关于版权与版权保护</h2>
+<p><strong>著作权</strong>，俗称<strong>版权</strong>，分为著作人格权与著作财产权。其中著作人格权的内涵包括了公开发表权、姓名表示权及禁止他人以扭曲、变更方式，利用著作损害著作人名誉的权利。著作财产权是无形的财产权，是基于人类知识所产生的权利，故属知识产权之一，包括重制权、公开口述权、公开播送权、公开上映权、公开演出权、公开传输权、公开展示权、改作权、散布权、出租权等等</p>
+<p>著作权要保障的是<strong>思想的表达形式</strong>，而不是保护思想本身，因为在保障著作财产权，此类专属私人之财产权利益的同时，尚须兼顾人类文明之累积与知识及信息之传播，从而算法、数学方法、技术或机器的设计，均不属著作权所要保障的对象</p>
+<p>著作权是有期限的权利，在一定期限经过后，著作财产权即归于失效，而属公有领域，任何人皆可自由利用。在著作权的保护期间内，即使未获作者同意，只要符合「合理使用」的规定，亦可利用。凡此规定皆在平衡著作人与社会对作品进一步使用之利益（摘自 Wikipedia 条目：<a href="https://zh.wikipedia.org/zh-sg/著作權#著作權之保障及反思" target="_blank">著作权</a>）</p>
+
+                <hr>
+                <h3>关于 Benjamin</h3>
+                <p>男生，第一批 00 后。现居安徽合肥<br>目前用闲暇时间创作和维护网站。各网站主要内容可能涉及个人生活、计算机和网络、轨道交通、本人的奇怪想法以及某些本人关注的问题</p>
+                <h3>相关网站</h3>
+                <p><a href="https://yyl125.top/" target="_blank">Benjamin's Blog</a>｜<a href="https://yyl125.top/navigation/" target="_blank">Benjamin's Navigation</a></p>
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%85%B3%E4%BA%8E%E7%89%88%E6%9D%83%E4%B8%8E%E7%89%88%E6%9D%83%E4%BF%9D%E6%8A%A4">关于版权与版权保护</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://yyl125.top/newsroom/post/navigation_new_update_about_dark_mode/">
+              <h3 class="post-title">
+                Benjamin&#39;s Navigation 现已支持深色模式
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  © 2024 Benjamin. All rights reserved.
+  <a class="rss" href="https://yyl125.top/newsroom/copyright" target="_blank">
+    版权信息与资源使用说明
+  </a>
+  <a class="rss" href="https://yyl125.top/newsroom/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

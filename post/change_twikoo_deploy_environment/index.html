@@ -1,0 +1,243 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>已更改 Benjamin&#39;s Blog 的评论系统后端服务部署环境 | Benjamin&#39;s Newsroom</title>
+<link rel="shortcut icon" href="https://yyl125.top/newsroom/favicon.ico?v=1705334361857">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://yyl125.top/newsroom/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="已更改 Benjamin&#39;s Blog 的评论系统后端服务部署环境 | Benjamin&#39;s Newsroom - Atom Feed" href="https://yyl125.top/newsroom/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script defer>
+  (function (document) {
+    const SOURCE = 'https://cdn.jsdelivr.net';
+    const DEST = 'https://gcore.jsdelivr.net';
+    const $ = document.querySelectorAll.bind(document);
+    const checkAvailable = (callback) => {
+      let timeoutId;
+      const newNode = document.createElement('link');
+      newNode.rel = 'stylesheet';
+      newNode.text = 'text/css';
+      const onError = () => {
+        if (!timeoutId) {
+          return;
+        }
+  
+        clearTimeout(timeoutId);
+        timeoutId = 0;
+        newNode.href = 'about:blank';
+        newNode.remove();
+        callback(false);
+      };
+  
+      timeoutId = setTimeout(onError, 2000);
+      newNode.addEventListener('error', onError);
+      newNode.addEventListener('load', function () {
+        newNode.remove();
+        clearTimeout(timeoutId);
+        callback(true);
+      });
+  
+      newNode.href =
+        SOURCE +
+        '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+        Date.now();
+      document.head.insertAdjacentElement('afterbegin', newNode);
+    };
+  
+    const replaceElementSrc = () => {
+      for (const element of $('link[rel="stylesheet"]')) {
+        if (element.href && element.href.includes(SOURCE)) {
+          element.href = element.href.replace(SOURCE, DEST);
+        }
+      }
+  
+      for (const element of $('script')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const newNode = document.createElement('script');
+          newNode.src = element.src.replace(SOURCE, DEST);
+          element.defer = true;
+          element.src = '';
+          element.before(newNode);
+          element.remove();
+        }
+      }
+  
+      for (const element of $('img')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const source = element.src;
+          // Used to cancel loading. Without this line it will remain pending status.
+          element.src = '';
+          element.src = source.replace(SOURCE, DEST);
+        }
+      }
+    };
+  
+    checkAvailable(function (isAvailable) {
+      if (isAvailable) {
+        return;
+      }
+  
+      console.warn(SOURCE + ' is not available.');
+  
+      replaceElementSrc();
+      // Replace dynamically added elements
+      setInterval(replaceElementSrc, 500);
+    });
+  })(document);
+</script>
+
+    <meta name="description" content="Twikoo 评论系统后端服务部署环境变更为 Vercel
+
+由于原先选择的 Twikoo 评论系统后端服务部署环境腾讯云近期变更了云开发 CloudBase 相关业务的计费模式，Benjamin 已将 Benjamin's Blog 所使..." />
+    <meta name="keywords" content="新闻稿" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://yyl125.top/newsroom">
+  <img class="avatar" src="https://yyl125.top/newsroom/images/avatar.png?v=1705334361857" alt="">
+  </a>
+  <h1 class="site-title">
+    Benjamin&#39;s Newsroom
+  </h1>
+  <p class="site-description">
+    来自 Benjamin 的最新消息
+  </p>
+  <div class="menu-container">
+    <a href="https://yyl125.top/newsroom" class="menu">首页</a>
+    <a href="https://yyl125.top/newsroom/archives" class="menu">归档</a>
+    <a href="https://yyl125.top/newsroom/tags" class="menu">标签</a>
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              已更改 Benjamin&#39;s Blog 的评论系统后端服务部署环境
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-08-15
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://yyl125.top/newsroom/tag/press_release/" class="post-tag">
+                  # 新闻稿
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/newsroom/post/Press_Release/Change_Twikoo_Deploy_Environment/Change_Twikoo_Deploy_Environment_Banner.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>Twikoo 评论系统后端服务部署环境变更为 Vercel</p>
+<!-- more -->
+<p>由于原先选择的 Twikoo 评论系统后端服务部署环境腾讯云近期变更了云开发 CloudBase 相关业务的计费模式，Benjamin 已将 Benjamin's Blog 所使用的 Twikoo 评论系统的后端服务部署环境变更为 Vercel</p>
+<p>自 2022 年 7 月初，腾讯云多次通过电子邮件及腾讯云站内信发送云服务 CloudBase 的计费模式变更通知，其称「为更好地提供优质可靠的服务，简化预付费、后付费、资源包等多种使用概念」，将于北京时间 2022 年 08 月 08 日起，对计费方式进行升级。在新计费模式下，统一采用基础套餐 + 按量计费的模式。即先购买带有一定配额的基础套餐，超出套餐配额部分按使用量付费。自 2022 年 08 月 08 日起，腾讯云为使用云开发 CloudBase 的用户提供至少一个月的操作缓冲期，可选择是否切换为新计费方式，超时切换的云开发环境将会停服释放。缓冲期内切换成功的用户将会获得额外代金券</p>
+<p>出于部署稳定性的考虑，Benjamin 已于近日将 Benjamin's Blog 的 Twikoo 评论系统的后端服务部署环境由腾讯云云开发 CloudBase 变更为 Vercel。Benjamin's Blog 的相关评论的功能不会产生变化。由于 Vercel 的相关服务可能在中国大陆地区存在访问问题。<strong>使用来自中国大陆地区的 IP 地址在 Benjamin's Blog 的使用 Twikoo 系统进行评论时可能存在稳定性问题</strong>。由此产生的问题，Benjamin 和 Twikoo 不对此负责，亦不再对相关反馈作出回应</p>
+<p>同时，文章阅读量统计等依托于 Twikoo 的服务将重新开始计算或提供服务</p>
+<p>欲了解有关本次云开发 CloudBase 计费模式变更的更多信息，请访问腾讯云关于此次变更的「<a href="https://cloud.tencent.com/document/product/876/75213" target="_blank">价格文档</a>」</p>
+
+                <hr>
+                <h3>关于 Benjamin</h3>
+                <p>男生，第一批 00 后。现居安徽合肥<br>目前用闲暇时间创作和维护网站。各网站主要内容可能涉及个人生活、计算机和网络、轨道交通、本人的奇怪想法以及某些本人关注的问题</p>
+                <h3>相关网站</h3>
+                <p><a href="https://yyl125.top/" target="_blank">Benjamin's Blog</a>｜<a href="https://yyl125.top/navigation/" target="_blank">Benjamin's Navigation</a></p>
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://yyl125.top/newsroom/post/change_domain_provider/">
+              <h3 class="post-title">
+                Benjamin 已更改所属域名的解析服务提供商
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  © 2024 Benjamin. All rights reserved.
+  <a class="rss" href="https://yyl125.top/newsroom/copyright" target="_blank">
+    版权信息与资源使用说明
+  </a>
+  <a class="rss" href="https://yyl125.top/newsroom/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

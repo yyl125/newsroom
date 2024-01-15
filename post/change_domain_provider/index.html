@@ -1,0 +1,242 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Benjamin 已更改所属域名的解析服务提供商 | Benjamin&#39;s Newsroom</title>
+<link rel="shortcut icon" href="https://yyl125.top/newsroom/favicon.ico?v=1705334361857">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://yyl125.top/newsroom/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Benjamin 已更改所属域名的解析服务提供商 | Benjamin&#39;s Newsroom - Atom Feed" href="https://yyl125.top/newsroom/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script defer>
+  (function (document) {
+    const SOURCE = 'https://cdn.jsdelivr.net';
+    const DEST = 'https://gcore.jsdelivr.net';
+    const $ = document.querySelectorAll.bind(document);
+    const checkAvailable = (callback) => {
+      let timeoutId;
+      const newNode = document.createElement('link');
+      newNode.rel = 'stylesheet';
+      newNode.text = 'text/css';
+      const onError = () => {
+        if (!timeoutId) {
+          return;
+        }
+  
+        clearTimeout(timeoutId);
+        timeoutId = 0;
+        newNode.href = 'about:blank';
+        newNode.remove();
+        callback(false);
+      };
+  
+      timeoutId = setTimeout(onError, 2000);
+      newNode.addEventListener('error', onError);
+      newNode.addEventListener('load', function () {
+        newNode.remove();
+        clearTimeout(timeoutId);
+        callback(true);
+      });
+  
+      newNode.href =
+        SOURCE +
+        '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+        Date.now();
+      document.head.insertAdjacentElement('afterbegin', newNode);
+    };
+  
+    const replaceElementSrc = () => {
+      for (const element of $('link[rel="stylesheet"]')) {
+        if (element.href && element.href.includes(SOURCE)) {
+          element.href = element.href.replace(SOURCE, DEST);
+        }
+      }
+  
+      for (const element of $('script')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const newNode = document.createElement('script');
+          newNode.src = element.src.replace(SOURCE, DEST);
+          element.defer = true;
+          element.src = '';
+          element.before(newNode);
+          element.remove();
+        }
+      }
+  
+      for (const element of $('img')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const source = element.src;
+          // Used to cancel loading. Without this line it will remain pending status.
+          element.src = '';
+          element.src = source.replace(SOURCE, DEST);
+        }
+      }
+    };
+  
+    checkAvailable(function (isAvailable) {
+      if (isAvailable) {
+        return;
+      }
+  
+      console.warn(SOURCE + ' is not available.');
+  
+      replaceElementSrc();
+      // Replace dynamically added elements
+      setInterval(replaceElementSrc, 500);
+    });
+  })(document);
+</script>
+
+    <meta name="description" content="所属域名的解析服务现已由阿里云变更为 Cloudflare
+
+Benjamin 已于近日更改了其所属域名的解析服务提供商。现在，当你访问 Benjamin 的所属域名及相关网站时，Cloudflare 将为你域名解析服务
+由于原先的域名解析..." />
+    <meta name="keywords" content="新闻稿" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://yyl125.top/newsroom">
+  <img class="avatar" src="https://yyl125.top/newsroom/images/avatar.png?v=1705334361857" alt="">
+  </a>
+  <h1 class="site-title">
+    Benjamin&#39;s Newsroom
+  </h1>
+  <p class="site-description">
+    来自 Benjamin 的最新消息
+  </p>
+  <div class="menu-container">
+    <a href="https://yyl125.top/newsroom" class="menu">首页</a>
+    <a href="https://yyl125.top/newsroom/archives" class="menu">归档</a>
+    <a href="https://yyl125.top/newsroom/tags" class="menu">标签</a>
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Benjamin 已更改所属域名的解析服务提供商
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-08-02
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+                <a href="https://yyl125.top/newsroom/tag/press_release/" class="post-tag">
+                  # 新闻稿
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://personalblogmedia.oss-cn-hangzhou.aliyuncs.com/img/newsroom/post/Press_Release/Change_Domain_Provider/Change_Domain_Provider_Banner.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>所属域名的解析服务现已由阿里云变更为 Cloudflare</p>
+<!-- more -->
+<p>Benjamin 已于近日更改了其所属域名的解析服务提供商。现在，当你访问 Benjamin 的所属域名及相关网站时，Cloudflare 将为你域名解析服务</p>
+<p>由于原先的域名解析服务提供商阿里云存在透明度不明等问题，出于后期维护需要，Benjamin 已将其所属域名解析服务提供商有阿里云更改为 Cloudflare</p>
+<p>由于实际需要，Cloudflare 仅为 Benjamin 的所属域名提供 DNS 服务，并不提供其它服务选项。由于 Cloudflare 的 DNS 服务在中国大陆地区可能存在访问问题，<strong>使用来自中国大陆地区的 IP 地址访问 Benjamin 所属域名及相关网站时可能存在稳定性问题</strong>。由此产生的问题，Benjamin 和 Cloudflare 不对此负责，亦不再对相关反馈作出回应</p>
+
+                <hr>
+                <h3>关于 Benjamin</h3>
+                <p>男生，第一批 00 后。现居安徽合肥<br>目前用闲暇时间创作和维护网站。各网站主要内容可能涉及个人生活、计算机和网络、轨道交通、本人的奇怪想法以及某些本人关注的问题</p>
+                <h3>相关网站</h3>
+                <p><a href="https://yyl125.top/" target="_blank">Benjamin's Blog</a>｜<a href="https://yyl125.top/navigation/" target="_blank">Benjamin's Navigation</a></p>
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://yyl125.top/newsroom/post/press_release_about_copyright_guide/">
+              <h3 class="post-title">
+                Benjamin 已完成对所属网站的版权信息与资源使用说明
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  © 2024 Benjamin. All rights reserved.
+  <a class="rss" href="https://yyl125.top/newsroom/copyright" target="_blank">
+    版权信息与资源使用说明
+  </a>
+  <a class="rss" href="https://yyl125.top/newsroom/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

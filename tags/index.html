@@ -1,0 +1,149 @@
+<html>
+  <head>
+  <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Benjamin&#39;s Newsroom</title>
+<link rel="shortcut icon" href="https://yyl125.top/newsroom/favicon.ico?v=1705334361857">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://yyl125.top/newsroom/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Benjamin&#39;s Newsroom - Atom Feed" href="https://yyl125.top/newsroom/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script defer>
+  (function (document) {
+    const SOURCE = 'https://cdn.jsdelivr.net';
+    const DEST = 'https://gcore.jsdelivr.net';
+    const $ = document.querySelectorAll.bind(document);
+    const checkAvailable = (callback) => {
+      let timeoutId;
+      const newNode = document.createElement('link');
+      newNode.rel = 'stylesheet';
+      newNode.text = 'text/css';
+      const onError = () => {
+        if (!timeoutId) {
+          return;
+        }
+  
+        clearTimeout(timeoutId);
+        timeoutId = 0;
+        newNode.href = 'about:blank';
+        newNode.remove();
+        callback(false);
+      };
+  
+      timeoutId = setTimeout(onError, 2000);
+      newNode.addEventListener('error', onError);
+      newNode.addEventListener('load', function () {
+        newNode.remove();
+        clearTimeout(timeoutId);
+        callback(true);
+      });
+  
+      newNode.href =
+        SOURCE +
+        '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+        Date.now();
+      document.head.insertAdjacentElement('afterbegin', newNode);
+    };
+  
+    const replaceElementSrc = () => {
+      for (const element of $('link[rel="stylesheet"]')) {
+        if (element.href && element.href.includes(SOURCE)) {
+          element.href = element.href.replace(SOURCE, DEST);
+        }
+      }
+  
+      for (const element of $('script')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const newNode = document.createElement('script');
+          newNode.src = element.src.replace(SOURCE, DEST);
+          element.defer = true;
+          element.src = '';
+          element.before(newNode);
+          element.remove();
+        }
+      }
+  
+      for (const element of $('img')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const source = element.src;
+          // Used to cancel loading. Without this line it will remain pending status.
+          element.src = '';
+          element.src = source.replace(SOURCE, DEST);
+        }
+      }
+    };
+  
+    checkAvailable(function (isAvailable) {
+      if (isAvailable) {
+        return;
+      }
+  
+      console.warn(SOURCE + ' is not available.');
+  
+      replaceElementSrc();
+      // Replace dynamically added elements
+      setInterval(replaceElementSrc, 500);
+    });
+  })(document);
+</script>
+
+  <meta name="description" content="来自 Benjamin 的最新消息" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://yyl125.top/newsroom">
+  <img class="avatar" src="https://yyl125.top/newsroom/images/avatar.png?v=1705334361857" alt="">
+  </a>
+  <h1 class="site-title">
+    Benjamin&#39;s Newsroom
+  </h1>
+  <p class="site-description">
+    来自 Benjamin 的最新消息
+  </p>
+  <div class="menu-container">
+    <a href="https://yyl125.top/newsroom" class="menu">首页</a>
+    <a href="https://yyl125.top/newsroom/archives" class="menu">归档</a>
+    <a href="https://yyl125.top/newsroom/tags" class="menu">标签</a>
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="tags-container">
+          
+            <a class="tag" href="https://yyl125.top/newsroom/tag/press_release/">新闻稿</a>
+          
+            <a class="tag" href="https://yyl125.top/newsroom/tag/update/">更新</a>
+          
+        </div>
+
+        <div class="site-footer">
+  © 2024 Benjamin. All rights reserved.
+  <a class="rss" href="https://yyl125.top/newsroom/copyright" target="_blank">
+    版权信息与资源使用说明
+  </a>
+  <a class="rss" href="https://yyl125.top/newsroom/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+  </body>
+</html>
