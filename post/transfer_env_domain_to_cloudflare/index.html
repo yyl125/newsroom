@@ -1,0 +1,235 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>站点资源域名即将转移至 Cloudflare | Benjamin&#39;s Newsroom</title>
+<link rel="shortcut icon" href="https://newsroom.yyl125.top/favicon.ico?v=1784006918870">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://newsroom.yyl125.top/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="站点资源域名即将转移至 Cloudflare | Benjamin&#39;s Newsroom - Atom Feed" href="https://newsroom.yyl125.top/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+<script defer src="https://umami.yyl125.cc/feedback.js" data-website-id="edf62419-8973-40cd-b8f2-0fe2841b147b"></script>
+<script type="text/javascript">
+  (() => {
+    const name = 'outbound-link-click';
+    document.querySelectorAll('a').forEach(a => {
+      if (a.host !== window.location.host && !a.getAttribute('data-umami-event')) {
+        a.setAttribute('data-umami-event', name);
+        a.setAttribute('data-umami-event-url', a.href);
+      }
+    });
+  })();
+</script>
+<script defer>
+  (function (document) {
+    const SOURCE = 'https://cdn.jsdelivr.net';
+    const DEST = 'https://gcore.jsdelivr.net';
+    const $ = document.querySelectorAll.bind(document);
+    const checkAvailable = (callback) => {
+      let timeoutId;
+      const newNode = document.createElement('link');
+      newNode.rel = 'stylesheet';
+      newNode.text = 'text/css';
+      const onError = () => {
+        if (!timeoutId) {
+          return;
+        }
+  
+        clearTimeout(timeoutId);
+        timeoutId = 0;
+        newNode.href = 'about:blank';
+        newNode.remove();
+        callback(false);
+      };
+  
+      timeoutId = setTimeout(onError, 2000);
+      newNode.addEventListener('error', onError);
+      newNode.addEventListener('load', function () {
+        newNode.remove();
+        clearTimeout(timeoutId);
+        callback(true);
+      });
+  
+      newNode.href =
+        SOURCE +
+        '/gh/PipecraftNet/jsdelivr-auto-fallback@main/empty.css?' +
+        Date.now();
+      document.head.insertAdjacentElement('afterbegin', newNode);
+    };
+  
+    const replaceElementSrc = () => {
+      for (const element of $('link[rel="stylesheet"]')) {
+        if (element.href && element.href.includes(SOURCE)) {
+          element.href = element.href.replace(SOURCE, DEST);
+        }
+      }
+  
+      for (const element of $('script')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const newNode = document.createElement('script');
+          newNode.src = element.src.replace(SOURCE, DEST);
+          element.defer = true;
+          element.src = '';
+          element.before(newNode);
+          element.remove();
+        }
+      }
+  
+      for (const element of $('img')) {
+        if (element.src && element.src.includes(SOURCE)) {
+          const source = element.src;
+          // Used to cancel loading. Without this line it will remain pending status.
+          element.src = '';
+          element.src = source.replace(SOURCE, DEST);
+        }
+      }
+    };
+  
+    checkAvailable(function (isAvailable) {
+      if (isAvailable) {
+        return;
+      }
+  
+      console.warn(SOURCE + ' is not available.');
+  
+      replaceElementSrc();
+      // Replace dynamically added elements
+      setInterval(replaceElementSrc, 500);
+    });
+  })(document);
+</script>
+
+    <meta name="description" content="站点资源域名 yyl125.cc 注册商即将由 Alibaba Cloud 转移至 Cloudflare
+
+
+     更新
+    站点资源域名注册商已于北京时间 2026 年 2 月 24 日成功转移至 Cloudflare
+
+Benj..." />
+    <meta name="keywords" content="新闻稿" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://newsroom.yyl125.top">
+  <img class="avatar" src="https://newsroom.yyl125.top/images/avatar.png?v=1784006918870" alt="">
+  </a>
+  <h1 class="site-title">
+    Benjamin&#39;s Newsroom
+  </h1>
+  <p class="site-description">
+    来自 Benjamin 的最新消息
+  </p>
+  <div class="menu-container">
+    <a href="https://newsroom.yyl125.top" class="menu">首页</a>
+    <a href="https://newsroom.yyl125.top/archives" class="menu">归档</a>
+    <a href="https://newsroom.yyl125.top/tags" class="menu">标签</a>
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              站点资源域名即将转移至 Cloudflare
+            </h2>
+            <div class="post-info">
+              <span>
+                2026-02-17
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+                <a href="https://newsroom.yyl125.top/tag/press_release/" class="post-tag">
+                  # 新闻稿
+                </a>
+              
+            </div>
+            
+              <img class="post-feature-image" src="https://oss.yyl125.cc/blog/img/newsroom/post/Press_Release/Transfer_Env_Domain_to_Cloudflare/Transfer_Env_Domain_to_Cloudflare_Banner.jpg" alt="">
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>站点资源域名 yyl125.cc 注册商即将由 Alibaba Cloud 转移至 Cloudflare</p>
+<!-- more -->
+<div class="alert alert-primary" role="alert">
+    <i class="ri-megaphone-line"></i> <strong>更新</strong>
+    <p style="margin-bottom: 0">站点资源域名注册商已于北京时间 2026 年 2 月 24 日成功转移至 Cloudflare</p>
+</div>
+<p>Benjamin 已向站点资源域名 yyl125.cc 的原注册商 Alibaba Cloud 申请将域名注册商转移至 Cloudflare，预计将在 5-7 天后自动完成转出</p>
+<p>在大多数情况下，转移域名时，将自动将额外一年添加到当前到期日期。注册机构负责确定何时添加额外一年，并在某些情况下可能不会添加一年：</p>
+<ul>
+<li>如果域名在到期日期后 45 天内转移，注册机构可能不会添加额外一年；</li>
+<li>如果当前到期日期超过 9 年，注册机构可能只会添加部分一年</li>
+</ul>
+<p>此外，由于相关 DNS 解析并未做出任何更改，相关站点请求理应无任何显性问题。但由于技术原因或其它不确定性，在转移期间，Benjamin 所有站点资源类请求可能遇到随机问题，敬请谅解</p>
+<p>以下是可能涉及到的相关请求：</p>
+<ol>
+<li>Benjamin 所有站点的媒体类资源请求，如图片、视频以及其它静态资源文件；</li>
+<li>Benjamin' Blog 的「随想」、「记录」板块；</li>
+<li>合作交流联系邮箱 hi@yyl125.cc 以及技术支持与反馈联系邮箱 support@yyl125.cc；</li>
+<li>其它未列明但可能有影响的内容</li>
+</ol>
+<p>转移期间，如需任何帮助，请通过 Benjamin 所留的其它任何联系方式予以联系</p>
+
+                <hr>
+                <h3>关于 Benjamin</h3>
+                <p>现居安徽合肥，一名穿梭在地底隧道的地铁司机<br>目前用闲暇时间创作和维护网站。各网站主要内容可能涉及个人生活、计算机和网络、轨道交通、本人的奇怪想法以及某些本人关注的问题</p>
+                <h3>相关网站</h3>
+                <p><a href="https://yyl125.top/" target="_blank">Benjamin's Blog</a>｜<a href="https://navigation.yyl125.top/" target="_blank">Benjamin's Navigation</a></p>
+                <h3>Newsroom 说明</h3>
+                <p>除法律规定的合理使用外，未经许可，不得复制、修改或重新发布本新闻稿的全部或实质性内容。媒体引用时，请注明来源并保留原意</p>
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://newsroom.yyl125.top/post/change_twikoo_deploy_environment/">
+              <h3 class="post-title">
+                已更改 Benjamin&#39;s Blog 的评论系统后端服务部署环境
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Copyright © 2026 Benjamin. All rights reserved.
+  <a class="rss" href="https://newsroom.yyl125.top/copyright" target="_blank">
+    版权信息与资源使用说明
+  </a>
+  <a class="rss" href="https://newsroom.yyl125.top/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
